@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 
 export default function Home() {
 
-  return <div className="border m-10">
+  return <div className="flex flex-col items-center">
     <Navbar/>
     <Hero/>
     <About/>
