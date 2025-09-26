@@ -9,16 +9,16 @@ export const Hero = () => {
     <div className="flex items-center">
       <div className="grow space-y-5">
         <p className="font-bold text-4xl bg-gradient-to-r from-white to-state-700 bg-clip-text text-transparent">
-          Jeg er Nina
+          Navn blabla..
         </p>
-        <p className="text-3xl">Jeg er utvikler</p>
+        <p className="text-3xl">Tekst her...</p>
         <Button
           onClick={() => console.log("Printes når jeg trykker på knappen")}
         >
           hei
         </Button>
       </div>
-      <div className="grow">
+      <div className="grow pl-5">
         <Image
           src={HeroImage}
           alt={"beskrivende tekst dersom bildet ikke vises"}
