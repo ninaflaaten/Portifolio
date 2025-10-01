@@ -1,6 +1,6 @@
 import z from "zod";
 import { Icon } from "@iconify/react";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 
 // export interface AboutFieldProps {
 //   // type og interface (ish samme greia)
@@ -10,9 +10,9 @@ import { FC, ReactNode } from "react";
 //   number?: number;
 // }
 
-export type AboutFieldType = z.infer<typeof AboutFieldSchema>; // vi bruker zod for typer for flere steder i koden (f.eks. bruker)
+export type AboutFieldType = z.infer<typeof aboutFieldSchema>; // vi bruker zod for typer for flere steder i koden (f.eks. bruker)
 // samme som den over bare med zod^
-const AboutFieldSchema = z.object({
+export const aboutFieldSchema = z.object({
   title: z.string(),
   description: z.string(),
   icon: z.string(),

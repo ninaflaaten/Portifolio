@@ -1,19 +1,8 @@
-import { FC, forwardRef, ReactNode } from "react";
+import { forwardRef, ReactNode } from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
-
-const OldButton: FC<ButtonProps> = ({ children, onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="bg-black hover:cursor-pointer hover:bg-gray-600 rounded-full w-20"
-    >
-      {children}
-    </button>
-  );
-};
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, onClick, className, ...props }, ref) => {

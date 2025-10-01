@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Navlinks, NavlinksProps } from "./Navlinks";
+import { Navlinks } from "./Navlinks";
 import { MobileNavlinks } from "./MobileNavlinks";
 
 export type Link = {

@@ -27,8 +27,8 @@ export const Hero = () => {
           src={HeroImage}
           alt={"beskrivende tekst dersom bildet ikke vises"}
           className="rounded-full animate-bounce [animation-duration:5s]"
-          width={200}
-          height={200}
+          width={250}
+          height={250}
         />
       </div>
     </div>

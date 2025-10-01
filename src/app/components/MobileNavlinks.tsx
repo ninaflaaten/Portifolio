@@ -7,7 +7,6 @@ import { useState } from "react";
 
 export function MobileNavlinks({ links }: NavlinksProps) {
   const [open, setOpen] = useState(false);
-  const [counter, setCounter] = useState(0);
 
   return (
     <div className="grow flex justify-end gap-5 pr-5 text-2xl sm:hidden">
@@ -15,14 +14,17 @@ export function MobileNavlinks({ links }: NavlinksProps) {
         icon={"fxemoji:hamburger"}
         onClick={() => {
           setOpen(!open);
-          setCounter(counter + 1);
         }}
       />{" "}
       {/* !open motsatt av open verdi*/}
       {open && (
         <div className="absolute z-10 flex flex-col bg-emerald-500 rounded-lg p-3 pl-4 top-10 ">
           {links.map((link) => {
-            return <Link href={link.href}>{link.title}</Link>;
+            return (
+              <Link key={link.href} href={link.href}>
+                {link.title}
+              </Link>
+            );
           })}
         </div>
       )}

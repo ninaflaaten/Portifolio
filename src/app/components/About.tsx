@@ -1,10 +1,9 @@
 import Image from "next/image";
 import AboutImage from "../assets/About.png";
-import { AboutField } from "./AboutField";
+import { AboutField, aboutFieldSchema, AboutFieldType } from "./AboutField";
 // import { AboutFieldProps } from "./AboutField";
-import { AboutFieldType } from "./AboutField";
 
-const aboutMe: AboutFieldType[] = [
+const aboutMeData: AboutFieldType[] = [
   // bruker typen for safety (kunne tatt inn array, men bruker heller interfacet vårt)
   {
     title: "Hvem er jeg?",
@@ -17,15 +16,17 @@ const aboutMe: AboutFieldType[] = [
     icon: "mdi:school",
   },
   {
-    title: "Frontend interesser",
+    title: "Interesser",
     description: "Lærer meg React og Next.js",
     icon: "line-md:coffee-half-empty-twotone-loop",
   },
 ];
 
+const aboutMe = aboutFieldSchema.array().parse(aboutMeData);
+
 export const About = () => {
   return (
-    <div className="flex flex-row p-10  bg-white/8 rounded-2xl w-250 mt-5">
+    <div className="flex flex-row p-10  bg-white/8 rounded-2xl w-250 mt-10">
       <div className="pr-15">
         <Image
           src={AboutImage}
@@ -39,6 +40,7 @@ export const About = () => {
         {aboutMe.map((item) => {
           return (
             <AboutField
+              key={item.title}
               title={item.title}
               description={item.description}
               icon={item.icon}
