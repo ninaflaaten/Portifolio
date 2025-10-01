@@ -21,7 +21,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         onClick={onClick}
-        className={`bg-black hover:cursor-pointer hover:bg-gray-600 rounded-full w-20 ${className}`}
+        className={`bg-cyan-700 hover:cursor-pointer hover:bg-cyan-800 hover-drop rounded-full w-20 ${className}`}
         {...props}
       >
         {children}

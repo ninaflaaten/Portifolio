@@ -28,7 +28,7 @@ const navBarLinks: Link[] = [
 
 export function Navbar() {
   return (
-    <div className=" flex p-3 w-full mb-20">
+    <div className=" flex p-3 w-full mb-20 ">
       <p className=" grow font-bold text-4xl">Portifolio</p>
       <Navlinks links={navBarLinks}></Navlinks>
       <MobileNavlinks links={navBarLinks}></MobileNavlinks>
