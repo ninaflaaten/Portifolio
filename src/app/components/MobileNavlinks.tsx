@@ -9,7 +9,7 @@ export function MobileNavlinks({ links }: NavlinksProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="grow flex justify-end gap-5 pr-5 text-2xl sm:hidden">
+    <div className="grow flex justify-end gap-5 text-2xl sm:hidden">
       <Icon
         icon={"fxemoji:hamburger"}
         onClick={() => {
@@ -18,7 +18,7 @@ export function MobileNavlinks({ links }: NavlinksProps) {
       />{" "}
       {/* !open motsatt av open verdi*/}
       {open && (
-        <div className="absolute z-10 flex flex-col bg-red-300 rounded-lg p-3 pl-4 top-10 ">
+        <div className="absolute z-10 flex flex-col bg-red-300 rounded-lg pl-4 top-10 ">
           {links.map((link) => {
             return (
               <Link key={link.href} href={link.href}>
