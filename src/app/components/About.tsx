@@ -1,33 +1,50 @@
 import Image from "next/image";
 import AboutImage from "../assets/About.png";
+import { AboutField } from "./AboutField";
+// import { AboutFieldProps } from "./AboutField";
+import { AboutFieldType } from "./AboutField";
 
-// idk hvordan bruke denne, men endre så bruke den....
-const aboutme = {
-  title: "Fronted developer",
-  description: "Backend developer",
-  icon: "?",
-};
+const aboutMe: AboutFieldType[] = [
+  // bruker typen for safety (kunne tatt inn array, men bruker heller interfacet vårt)
+  {
+    title: "Hvem er jeg?",
+    description: "Jeg er Nina.....",
+    icon: "charm:person",
+  },
+  {
+    title: "Student",
+    description: "Studerer på NTNU, bachelor i informatikk fra UiB",
+    icon: "mdi:school",
+  },
+  {
+    title: "Frontend interesser",
+    description: "Lærer meg React og Next.js",
+    icon: "line-md:coffee-half-empty-twotone-loop",
+  },
+];
 
 export const About = () => {
   return (
-    <div className="w-full pl-30 pt-20 grow flex">
-      <div className=" text-2xl w-250">
-        <p className="font-bold">About me</p>
-        <p>
-          Finne ut hvordan gjlre med teksten her ejrhbejhrbgjebrgj erhbgjebrgjhb
-          jhberjhbejrb behb hbejhr fungerer vel egt sånn hre da jejem men skal
-          bruke den funksjonen da... idk hvordan
-        </p>
-      </div>
-
-      <div className="grow absolute pl-250">
+    <div className="flex flex-row p-10  bg-white/8 rounded-2xl w-250 mt-5">
+      <div className="pr-15">
         <Image
           src={AboutImage}
-          alt={"beskrivende tekst dersom bildet ikke vises"}
+          alt="Beskrivende tekst dersom bildet ikke vises"
           className="rounded-full"
           width={200}
           height={200}
         />
+      </div>
+      <div>
+        {aboutMe.map((item) => {
+          return (
+            <AboutField
+              title={item.title}
+              description={item.description}
+              icon={item.icon}
+            ></AboutField>
+          );
+        })}
       </div>
     </div>
   );
