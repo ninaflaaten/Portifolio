@@ -18,7 +18,7 @@ export function MobileNavlinks({ links }: NavlinksProps) {
       />{" "}
       {/* !open motsatt av open verdi*/}
       {open && (
-        <div className="absolute z-10 flex flex-col bg-emerald-500 rounded-lg p-3 pl-4 top-10 ">
+        <div className="absolute z-10 flex flex-col bg-red-300 rounded-lg p-3 pl-4 top-10 ">
           {links.map((link) => {
             return (
               <Link key={link.href} href={link.href}>
