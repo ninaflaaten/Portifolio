@@ -26,7 +26,7 @@ export const Hero = () => {
         </Button>
       </div>
 
-      <div className="grow pl-10 max-sm:pl-0 max-sm:self-end">
+      <div className="grow pl-10 max-sm:pl-0 max-sm:self-end hover-pop">
         <Image
           src={HeroImage}
           alt="beskrivende tekst dersom bildet ikke vises"

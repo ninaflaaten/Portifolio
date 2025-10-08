@@ -38,3 +38,10 @@ body {
     @apply transition transform hover:translate-y-0.5;
   }
 }
+
+@layer utilities {
+  .hover-pop {
+    @apply transform transition duration-500 hover:scale-120;
+  }
+}
+
