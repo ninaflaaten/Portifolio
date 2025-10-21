@@ -4,11 +4,13 @@ import { AboutField, aboutFieldSchema, AboutFieldType } from "./AboutField";
 import { AboutService } from "../../../backend/AboutService";
 
 const data = AboutService.getAboutInfo();
-
 const aboutMe = aboutFieldSchema.array().parse(data);
+const style = "transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-[0_10px_25px_-5px_rgba(236,72,153,0.3)] hover:bg-white/15 hover:backdrop-blur-sm rounded-2xl";
 
+// section id for routing
 export const About = () => {
   return (
+    <section id="About"> 
     <div
       className="flex flex-row p-10 bg-white/8 rounded-2xl w-250 mt-10
                  max-sm:flex-col max-sm:items-start max-sm:w-full max-sm:gap-6"
@@ -22,8 +24,6 @@ export const About = () => {
           height={200}
         />
       </div>
-
-      {/* for mobilskjerm */}
       <div className="text-left max-sm:w-full">
         {aboutMe.map((item) => (
           <AboutField
@@ -31,10 +31,13 @@ export const About = () => {
             title={item.title}
             description={item.description}
             icon={item.icon}
-            className="hover:bg-gradient-to-l from-pink-600"
+            className={style} // TODO noe annet
+            size="text-2xl"
+            padding="-ml-5"
           />
         ))}
       </div>
     </div>
+    </section>
   );
 };

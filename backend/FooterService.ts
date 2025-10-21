@@ -1,35 +1,32 @@
-import { AboutItem } from "../types/About";
+import { FooterItem } from "../types/Footer";
 
-interface IAboutService {
+interface IFooterService {
   myfavoriteNumber: number;
-  getAboutInfo: () => AboutItem[]; // () => for at det er en funksjon
+  getFooterInfo: () => FooterItem[]; // () => for at det er en funksjon
   getExprTime: (input: string) => string;
 }
 
-
-export const AboutService: IAboutService = {
+export const FooterService: IFooterService = {
   myfavoriteNumber: 5,
-  getAboutInfo: () => {
+  getFooterInfo: () => {
     return [
       {
-        title: "Hvem er jeg?",
-        description: "Nina Flaaten, 24 år...",
-        icon: "charm:person",
+        title: "LinkedIn",
+        description: "https://www.linkedin.com/in/ninaflaaten/",
+        icon: "carbon:logo-linkedin",
       },
       {
-        title: "Student",
-        description: "Studerer på NTNU, bachelor i informatikk fra UiB",
-        icon: "mdi:school",
+        title: "Mail",
+        description: "nina.flaaten@stud.ntnu.no",
+        icon: "carbon:email",
       },
       {
-        title: "Interesser",
-        description: "Lage spill i Java, lære meg React, se på skrekkfilm og spille Unstable Unicorn",
-        icon: "line-md:star-alt",
+        title: "Github",
+        description: "https://github.com/ninaflaaten",
+        icon: "carbon:logo-github",
       },
     ];
   },
-
-  
 
   getExprTime: (input: string) => {
     const today = new Date();

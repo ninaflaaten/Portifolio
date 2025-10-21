@@ -12,8 +12,8 @@ const navBarLinks: Link[] = [
     href: "#About",
   },
   {
-    title: "Experience",
-    href: "#Experience",
+    title: "Skills",
+    href: "#Skills",
   },
   {
     title: "Projects",
@@ -27,8 +27,8 @@ const navBarLinks: Link[] = [
 
 export function Navbar() {
   return (
-    <div className=" flex p-3 w-full mb-20 ">
-      <p className=" grow font-bold text-4xl">Portifolio</p>
+    <div className="fixed top-0 left-0 w-full p-3 shadow-md z-50 bg-[#aa647b]">
+      <p className="grow font-bold text-4xl">Portifolio</p>
       <Navlinks links={navBarLinks}></Navlinks>
       <MobileNavlinks links={navBarLinks}></MobileNavlinks>
     </div>

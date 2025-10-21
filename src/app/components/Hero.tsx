@@ -9,7 +9,7 @@ export const Hero = () => {
     <div
       className="flex items-center w-160 
              max-sm:flex-col max-sm:items-start max-sm:w-full max-sm:gap-6 
-             max-sm:px-4"
+             max-sm:px-4 pt-30"
     >
       <div className="grow space-y-4 text-left">
         <p className="font-bold text-4xl bg-gradient-to-r from-white bg-clip-text text-transparent">

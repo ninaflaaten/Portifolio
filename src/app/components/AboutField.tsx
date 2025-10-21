@@ -12,6 +12,8 @@ export const aboutFieldSchema = z.object({
   icon: z.string(),
   number: z.number().optional(),
   className: z.string().optional(),
+  size: z.string().optional(),
+  padding: z.string().optional(),
 });
 
 export const AboutField: FC<AboutFieldType> = ({
@@ -20,16 +22,18 @@ export const AboutField: FC<AboutFieldType> = ({
   icon,
   number,
   className,
+  size,
+  padding,
 }) => {
   return (
-    <div className={cn("flex flex-row ", className)}>
-      <div className="text-2xl">
+    <div className={cn("flex flex-row p-2", className)}>
+      <div className={cn(size)}>
         <Icon icon={icon}></Icon>
       </div>
       <div className="pb-4">
         <h2 className="font-bold pl-2 text-2xl">{title}</h2>
         <div></div>
-        <p className="text-xl -ml-5">{description}</p>
+        <p className={cn("text-xl", padding)}>{description}</p>
         <p className="text-xl -ml-5">{number}</p>
       </div>
     </div>

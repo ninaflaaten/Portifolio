@@ -1,6 +1,6 @@
 import z from "zod";
 
-const AboutItemSchema = z.object({
+const FooterItemSchema = z.object({
   title: z.string(),
   description: z.string(),
   icon: z.string(),
@@ -8,4 +8,4 @@ const AboutItemSchema = z.object({
   className: z.string().optional(),
 });
 
-export type AboutItem = z.infer<typeof AboutItemSchema>;
+export type FooterItem = z.infer<typeof FooterItemSchema>;
